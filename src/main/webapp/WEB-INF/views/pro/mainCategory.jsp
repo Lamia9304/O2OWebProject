@@ -8,11 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src="" id="lesson">레슨</a>
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src=""></a>
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src=""></a>
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src=""></a>
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src=""></a>
 
 <c:forEach var="MainDTO" items="${list}">
 <a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src="" ><c:out value="${MainDTO.name}"></c:out></a>

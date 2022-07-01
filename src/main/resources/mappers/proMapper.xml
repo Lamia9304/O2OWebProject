@@ -33,8 +33,10 @@
 	<select id="getCategory" resultType="com.itwillbs.domain.MainDTO">
 		select name from MAINCATEGORY
 	</select>
+	<select id="getQuestions" resultType="com.itwillbs.domain.QusetionDTO">
 
 
+	</select>
 
 
 <!-- 	<update id=""></update> -->

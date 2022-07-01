@@ -39,7 +39,6 @@ public class ProController {
     @RequestMapping(value = "/pro/mainCategory", method = RequestMethod.GET)
 	public String mainCategory(Model model) {
 		List<MainDTO> list=proService.getCategoryname();
-		System.out.println(list.get(1));
 		model.addAttribute("list",list);
 		System.out.println("ProController mainCategory()");
 
