@@ -2,9 +2,12 @@ package com.itwillbs.domain;
 
 import java.sql.Timestamp;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ProDTO {
     private int id;
-    private int serviceId;
+    private String serviceId;
     private int addressId;
     private int gender;
     private int career;
@@ -16,8 +19,18 @@ public class ProDTO {
     private String name;
     private String phone;
     private String email;
+    private Timestamp date;
+    
+    public Timestamp getDate() {
+		return date;
+	}
 
-    public int getId() {
+	public void setDate(Timestamp date) {
+		this.date = date;
+	}
+
+
+	public int getId() {
         return id;
     }
 
@@ -25,11 +38,11 @@ public class ProDTO {
         this.id = id;
     }
 
-    public int getServiceId() {
+    public String getServiceId() {
         return serviceId;
     }
 
-    public void setServiceId(int serviceId) {
+    public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
 

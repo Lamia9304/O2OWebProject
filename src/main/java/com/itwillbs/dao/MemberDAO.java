@@ -1,6 +1,9 @@
 package com.itwillbs.dao;
 
+import com.itwillbs.domain.MainDTO;
 import com.itwillbs.domain.MemberDTO;
+
+import java.util.List;
 
 public interface MemberDAO {
 	//추상메서드 정의
@@ -17,4 +20,6 @@ public interface MemberDAO {
 		public void updatePass(MemberDTO memberDTO);
 		
 		public void deleteMember(MemberDTO memberDTO);
+
+
 }
