@@ -8,10 +8,31 @@
 <title>Insert title here</title>
 </head>
 <body>
+<style>
+     ul{
+          margin: 0; padding: 0;
+     }
+     * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          border: 0px solid silver;
+     }
+     img {
+          width: 70px;
+     }
 
-<c:forEach var="MainDTO" items="${list}">
-<a href="<%=request.getContextPath()%>/pro/lesson"><img alt="noImages" src="" ><c:out value="${MainDTO.name}"></c:out></a>
 
+</style>
+
+
+<form action="<%=request.getContextPath()%>/pro/lesson" method="get">
+<c:forEach var="MainDTO" items="${list}" varStatus="status">
+<a href="<%=request.getContextPath()%>/pro/lesson/${MainDTO.name}"><img alt="noImages" src="../resources/img/icon/${MainDTO.name}.png" ><c:out value="${MainDTO.name}"></c:out></a>
+     <c:out value="${status.count}"></c:out>
 </c:forEach>
+</form>
+
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

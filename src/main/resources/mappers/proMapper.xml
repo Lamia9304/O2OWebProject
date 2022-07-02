@@ -31,7 +31,7 @@
 	</select>
 
 	<select id="getCategory" resultType="com.itwillbs.domain.MainDTO">
-		select name from MAINCATEGORY
+		select name from MAINCATEGORY order by id;
 	</select>
 
 

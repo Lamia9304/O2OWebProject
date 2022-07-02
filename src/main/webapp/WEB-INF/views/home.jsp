@@ -864,9 +864,9 @@ main{
         <h5 class="icontext">다양한 서비스를 찾아보세요!</h5>
             <div class="row" id="row1">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
-                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='#';">
+                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='/pro/mainCategory';">
                         <div class="card-body">
-                            <img src="resources/img/icon/lesson.png">                            
+                            <img src="resources/img/icon/lesson.png">
                             <h2 class="card-title display-1" style="font-size:2.5vmin;">레슨</h2>
                         </div>
                     </div>
