@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import com.itwillbs.domain.MainDTO;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +21,10 @@ public class QuestionController {
     private QuestionService questionService;
 
     @RequestMapping(value = "/category/lesson", method = RequestMethod.GET)
-    public String lesson() {
+    public String lesson(Model model) {
 
+        List<MainDTO> mainDTOS=questionService.getMain();
+        model.addAttribute("main",mainDTOS);
         return "category/lesson";
     }
 

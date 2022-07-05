@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ko-KR">
@@ -851,7 +852,6 @@ main{
 
 
 
-
   <div class="page-section">
   
     <div class="container">
@@ -863,38 +863,20 @@ main{
         <div class="container" >
         <h5 class="icontext">다양한 서비스를 찾아보세요!</h5>
             <div class="row" id="row1">
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
-                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='/pro/mainCategory';">
-                        <div class="card-body">
-                            <img src="resources/img/icon/lesson.png">
-                            <h2 class="card-title display-1" style="font-size:2.5vmin;">레슨</h2>
+
+                <c:forEach var="main" items="${main}" varStatus="status">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
+                        <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='/category/${main.id}'">
+                            <div class="card-body">
+                                <img src="resources/img/icon/${main.name}.png">
+                                <h2 class="card-title display-1" style="font-size:2.5vmin;"> <c:out value="${main.name}"></c:out></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
-                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='#';">
-                        <div class="card-body">
-                            <img src="resources/img/icon/health.png">                            
-                            <h2 class="card-title display-1" style="font-size:2.5vmin;">건강</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
-                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='#';">
-                        <div class="card-body">
-                            <img src="resources/img/icon/event.png">
-                            <h2 class="card-title display-1" style="font-size:2.5vmin;">이벤트</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 p-2">
-                    <div class="card p-3 text-center border-0" style=" cursor: pointer;" onclick="location.href='#';">
-                        <div class="card-body">
-                            <img src="resources/img/icon/cleaning.png">
-                            <h2 class="card-title display-1" style="font-size:2.5vmin;">청소</h2>
-                        </div>
-                    </div>
-                </div>
+                </c:forEach>
+
+
+
             </div>
         </div>
     </section>

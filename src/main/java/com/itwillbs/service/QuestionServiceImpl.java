@@ -1,6 +1,7 @@
 package com.itwillbs.service;
 
 import com.itwillbs.dao.QuestionDAO;
+import com.itwillbs.domain.MainDTO;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -22,4 +23,9 @@ public class QuestionServiceImpl implements QuestionService{
 
             return questionDAO.getQuestions_id(services_id);
         }
+
+    @Override
+    public List<MainDTO> getMain() {
+        return questionDAO.getMain();
+    }
 }

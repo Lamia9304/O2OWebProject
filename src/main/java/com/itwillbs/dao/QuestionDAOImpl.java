@@ -1,5 +1,6 @@
 package com.itwillbs.dao;
 
+import com.itwillbs.domain.MainDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +25,11 @@ public class QuestionDAOImpl implements QuestionDAO {
     public List<Integer> getQuestions_id(int services_id) {
 
         return sqlSession.selectList(namespace + ".getQuestions_id", services_id);
+    }
+
+    @Override
+    public List<MainDTO> getMain() {
+        return sqlSession.selectList(namespace+".getMain");
     }
 }
 

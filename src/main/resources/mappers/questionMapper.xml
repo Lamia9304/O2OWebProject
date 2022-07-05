@@ -11,6 +11,9 @@
 		select id from QUESTIONS where services_id=#{services_id};
 	</select>
 
+	<select id="getMain" resultType="com.itwillbs.domain.MainDTO">
+		select *from MAINCATEGORY order by id;
+	</select>
 
 
 </mapper>
