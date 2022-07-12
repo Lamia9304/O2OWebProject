@@ -94,7 +94,7 @@ input[type=button] {
 				  placeholder="리뷰를 작성해주세요."></textarea>
 	</div>
 	<input type="button" value="리뷰작성" id="submit">
-<input type="hidden" id="pro_id" name="pro_id" value="1">
+<input type="hidden" id="pro_id" name="pro_id" value="${proDTO.id}">
 <input type="hidden" id="account_id" name="account_id" value="3">
 </form>
 

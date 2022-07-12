@@ -4,7 +4,10 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import com.itwillbs.domain.GetProDTO;
+import com.itwillbs.service.ProService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,10 +24,16 @@ public class ReviewController {
 	
 	@Inject
 	private ReviewService reviewService;
+
+	@Inject
+	private ProService proService;
 	
 	@RequestMapping(value = "/pro/writereviews", method = RequestMethod.GET)
-    public String write() {
-        return "pro/writereviews";
+    public String write(Model model,HttpSession session){
+        String email=session.getAttribute("email").toString();
+		GetProDTO proDTO=proService.getProemail(email);
+		model.addAttribute("proDTO",proDTO);
+		return "pro/writereviews";
     }
 
 
@@ -38,15 +47,17 @@ public class ReviewController {
 	}
 
 	@RequestMapping(value = "/pro/proprofile", method = RequestMethod.GET)
-    public String selectproprofile(HttpServletRequest request, Model model) {
+    public String selectproprofile(HttpServletRequest request, Model model, HttpSession session) {
 
+		String email=session.getAttribute("email").toString();
 		int pageSize=10;
 		String pageNum=request.getParameter("pageNum");
+		GetProDTO proDTO= proService.getProemail(email);
 		if(pageNum==null){
 			pageNum="1";
 		}
 		PageDTO pageDTO=new PageDTO();
-		pageDTO.setPro_id(1);
+		pageDTO.setPro_id(proDTO.getId());
 		pageDTO.setPageSize(pageSize);
 		pageDTO.setPageNum(pageNum);
 
