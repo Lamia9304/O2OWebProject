@@ -114,8 +114,8 @@ body {
   
   <div class="career"style="float:left; padding: 30px; line-height: 15px;">
   총 경력 <a></a>
-  <h3> ${Pro.career}년</h3>
-  
+  <h3> ${proDTO.career}년</h3>
+
   </div>
   <br><br><br>
   <br><br><br>
@@ -128,8 +128,8 @@ body {
 <div class="topnav">
   <a class="active" href="#jungoinfo" >주고 정보</a>
   <a href="#photo"  >사진</a>
-  <a href="#review" >리뷰</a>
-  <a href="<%=request.getContextPath() %>/pro/estimates" >견적 요청서</a>
+  <a href="<%=request.getContextPath() %>/pro/proprofile?num=${proDTO.id}" >리뷰</a>
+  <a href="<%=request.getContextPath() %>/pro/estimates">견적 요청서</a>
     <a href="#Q&A">Q&A</a>
      
 </div>

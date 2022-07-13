@@ -47,9 +47,11 @@ public class ReviewController {
 	}
 
 	@RequestMapping(value = "/pro/proprofile", method = RequestMethod.GET)
-    public String selectproprofile(HttpServletRequest request, Model model, HttpSession session) {
+    public String selectproprofile(HttpServletRequest request, Model model, HttpSession session,String num) {
 
 		String email=session.getAttribute("email").toString();
+		int pro_id=Integer.parseInt(num);
+
 		int pageSize=10;
 		String pageNum=request.getParameter("pageNum");
 		GetProDTO proDTO= proService.getProemail(email);
@@ -57,7 +59,7 @@ public class ReviewController {
 			pageNum="1";
 		}
 		PageDTO pageDTO=new PageDTO();
-		pageDTO.setPro_id(proDTO.getId());
+		pageDTO.setPro_id(pro_id);
 		pageDTO.setPageSize(pageSize);
 		pageDTO.setPageNum(pageNum);
 

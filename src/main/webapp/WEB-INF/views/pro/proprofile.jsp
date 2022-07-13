@@ -172,7 +172,12 @@ function openChild() {
 
 </head>
 <body>
-<input type="button" value = "리뷰쓰기" onclick="openChild()"><br>
+<jsp:include page="../inc/top.jsp"></jsp:include>
+
+
+
+
+
 <!-- 출력부분 -->
 <div>
 <h2>리뷰</h2>
@@ -185,11 +190,12 @@ function openChild() {
 <li><img  class="star1" src="https://assets.cdn.soomgo.com/icons/icon-common-review-star-small-full.svg" alt="Star Icon"></li>
 	</c:forEach>
 </ul>
-<div class="reviewdata">${count}개 리뷰</div>
-</div>
-</div>
+<div class="reviewdata">${count}개 리뷰</div><input type="button" value = "리뷰쓰기" onclick="openChild()">
 </div>
 
+</div>
+</div>
+<br>
 <c:forEach var="reviewDTO" items="${reviewList}">
 <div>
 <div class="review1">
@@ -230,6 +236,6 @@ function openChild() {
 <a href="${pageContext.request.contextPath}/pro/list?pageNum=${pageDTO.startPage+pageDTO.pageBlock }">Next</a>
 </c:if>
 
-
+<jsp:include page="../inc/bottom.jsp"></jsp:include>
 </body>
 </html>
