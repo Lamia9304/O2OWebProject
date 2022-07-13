@@ -341,12 +341,18 @@ div {
 <input type="hidden" name="email" value="${proDTO.email }">
 <div class="page-section" style="padding-top: 0px">
     <div class="container">
-        <form action="#" class="contact-form py-5 px-lg-5" style="max-width: 700px; margin-left: auto; margin-right: auto">
+        <form action="#" class="contact-form py-5 px-lg-5" style="max-width: 700px; margin-left: auto; margin-right: auto"enctype="multipart/form-data">
             <h2 class="text-black"><b>주고 프로필</b></h2>
-            <div class="profile-image"></div>
+            <div class="profile-image"></div><br><br>
 
 
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" name="file">
+                    <label class="custom-file-label" for="customFile">파일선택</label>
+                    <input type="submit" class="btn update"value="수정">
+                </div>
 
+            <br><br>
             <input type="file" name="file">
             <input type="submit" class="btn update"value="수정">
 

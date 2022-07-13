@@ -181,7 +181,8 @@ function openChild() {
 <!-- 출력부분 -->
 <div>
 <h2>리뷰</h2>
-<div class="reviewlist">
+
+
 <div class="avg">${avg}</div>
 
 <div class="ratingul">

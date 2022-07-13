@@ -120,5 +120,8 @@
 		group by e.account_id
 	</select>
 
+	<delete id="deletePro" parameterType="map">
+		DELETE from PROS WHERE password=#{password}
+	</delete>
 
 </mapper>
