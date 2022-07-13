@@ -9,6 +9,8 @@
 
 
 .detail-info {
+    display: flex;
+    align-items: center;
 text-align: center;
 background-color: #fafafa;
 }
@@ -52,6 +54,159 @@ body {
 .topnav a.active {
   border-bottom: 3px solid orange;
 }
+
+
+
+header img {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+/* 버튼 */
+
+.button-55 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #FFCD4A;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+
+.button-55:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+
+}
+
+}
+.button-55:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+
+}
+
+/*  푸터  */
+.callnumber{
+    padding-bottom: 0.1875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-stretch: normal;
+    color: #FFCD4A;
+}
+.callnumberdown{
+    margin: 0;
+    font-size: .875rem;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #737373;
+}
+#footermenu1{
+    margin: 0;
+    font-size: .875rem;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #737373;
+    position: absolute;
+    bottom:49px;
+}
+#footermenu2{
+    margin: 0;
+    font-size: .875rem;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #737373;
+
+}
+#footermenu3{
+    margin: 0;
+    font-size: .875rem;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #737373;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.item {
+    color: #323232;
+    width: 600px;
+}
+
+.item-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 0.5rem;
+    border-bottom: 0.0625rem solid #f2f2f2;
+    font-size: 15.8px;
+    height: 80px;
+}
+
+.item-title{
+    color: #b5b5b5;
+    font-weight: bold;
+}
+
+.item-info {
+    padding-top: 0.25rem;
+
+}
+
+.profile-image {
+    width: 6.25rem;
+    height: 6.25rem;
+    min-width: 4.375rem;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 0.0625rem solid #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-image: url("https://dmmj3ljielax6.cloudfront.net/upload/profile-default/soomgo_70.jpg?h=320&w=320");
+}
+
+.camera-icon {
+    cursor: pointer;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
    
 
 </style>
@@ -101,22 +256,28 @@ body {
     </div>
   </div>
   
-  
-  <div class="detail-info" >
-  <div class="employees" style="float:left; padding: 30px; line-height: 15px;" >
-  고용
-  <h3>회</h3>
- </div>
- <p> </p>
-  <div class="review"style="float:left; padding: 30px; line-height: 15px;" >
-  리뷰
-  </div>
-  
-  <div class="career"style="float:left; padding: 30px; line-height: 15px;">
-  총 경력 <a></a>
-  <h3> ${proDTO.career}년</h3>
+
+  <div class="container">
+      <div class="detail-info" >
+
+
+          <div class="group" style="float:left; padding: 30px; line-height: 15px;" >
+              고용
+              <h3>회</h3>
+          </div>
+          <p> </p>
+          <div class="group"style="float:left; padding: 30px; line-height: 15px;" >
+              리뷰
+          </div>
+
+          <div class="group"style="float:left; padding: 30px; line-height: 15px;">
+              총 경력 <a></a>
+              <h3> ${proDTO.career}년</h3>
+
+          </div>
 
   </div>
+
   <br><br><br>
   <br><br><br>
   <div>
@@ -291,6 +452,26 @@ body {
             </li>
 
 
+
+            <li class="item-container" onclick="location.href='<%=request.getContextPath() %>/pro/proprofile?num=${proDTO.id}'">
+                <div class="item">
+                    <div class="item-title">리뷰</div>
+                </div>
+                <div>
+                    <img alt="arrow" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                </div>
+            </li>
+
+
+            <li class="item-container" onclick="location.href='<%=request.getContextPath() %>/pro/estimates'">
+                <div class="item">
+                    <div class="item-title">견적요청서</div>
+                </div>
+                <div>
+                    <img alt="arrow" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                </div>
+            </li>
+
             <div class="item-container" style="margin-top:50px; height: 50px;" onclick="location.href='<%=request.getContextPath() %>/pro/delete'">
                 <div class="item">
                     <div class="text-black">주고 탈퇴</div>
@@ -301,14 +482,6 @@ body {
             </div>
         </form>
     </div>
-
-    <div class="container-fluid mt-4">
-
-    </div>
-
-
-
-
 </div>
 <jsp:include page="../inc/bottom.jsp"></jsp:include>
 </body>
