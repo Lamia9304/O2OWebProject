@@ -485,4 +485,32 @@ public class ProController {
 
 		return "redirect:/";
 	}
+	@RequestMapping(value="/pro/delete",method = RequestMethod.GET)
+	public String delete(HttpSession session,Model model){
+
+		String email = (String)session.getAttribute("email");
+
+		ProDTO proDTO = proService.getPro(email);
+		model.addAttribute("proDTO", proDTO);
+
+		return "pro/delete";
+	}
+
+
+
+
+	@RequestMapping(value = "/pro/deletePro", method = RequestMethod.GET)
+	public String deletePro(ProDTO proDTO) {
+
+		ProDTO proDTO2=proService.proCheck(proDTO);
+
+		if(proDTO!=null) {
+			proService.deletePro(proDTO);
+		}
+		else{
+			return "redirect:/pro/deleteMsg";
+		}
+
+		return "redirect:/pro/login";
+	}
 }
