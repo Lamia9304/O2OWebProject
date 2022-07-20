@@ -31,6 +31,8 @@
  ---
  
  <h3>DB설계</h3><br>
+ 
+
  <img src="https://user-images.githubusercontent.com/100066303/179911930-94e161da-08ff-4f98-81bc-2dfe513aa24d.png"/>
 
 ---
@@ -96,6 +98,8 @@ set과 List를 사용했을 때보다 컴파일 속도가 유의미하게 빨라
  
  
  <h3> 역할 분배 </h3>
- <img src="https://user-images.githubusercontent.com/43948789/179933071-d853c3a1-1538-46a4-8408-bb21b905986f.PNG"/>
+ 
+
+ <img src="https://user-images.githubusercontent.com/43948789/179933316-b6247206-c7dd-417b-889d-b41d2b9a005b.PNG"/>
 
  
