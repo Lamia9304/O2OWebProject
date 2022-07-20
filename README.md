@@ -101,6 +101,6 @@ set과 List를 사용했을 때보다 컴파일 속도가 유의미하게 빨라
  <h3> 역할 분배 </h3>
  
 
- <img src="https://user-images.githubusercontent.com/43948789/179933527-650db913-95f2-405a-b831-0f9f75a2859b.png)"/>
+ <img src="https://user-images.githubusercontent.com/43948789/179933527-650db913-95f2-405a-b831-0f9f75a2859b.png"/>
 
  
